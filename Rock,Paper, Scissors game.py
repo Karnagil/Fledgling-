@@ -1,0 +1,55 @@
+def rps():
+	import random
+	#Object/VariableChart:
+	AiChoice=('rock','paper','scissors')
+	rc=random.choice(AiChoice)
+	r=('rock','Rock','ROCK')
+	p=('paper','Paper','PAPER')
+	s=('scissors','Scissors','SCISSORS')
+	d= ('done','Done','DONE')
+	options="Rock, Paper or Scissors?\n"
+	correction='Enter rock, paper, or scissors, please!'
+	lose='{} beats {}. You lose!'
+	play='Try Again? Y/N( y or Y for YES, and n or N for NO)'
+	inp2=('n','N')
+	inp1=('y','Y')
+	win='{}beats {}. You win! The dumb A.I. lost! You defeated SkyNet!'
+	draw='{} and {} are the same. It is a draw!'
+	All=AiChoice+r+p+s+d
+
+	while True:
+		userchoice=input(options)
+		if not userchoice in All:
+			print(correction)
+			continue
+		if userchoice in d:
+			quit()
+		else:
+			if userchoice in r and rc in p or userchoice in p and rc in s or userchoice in s and rc in r:
+				print(rc)
+				print(lose.format(rc,userchoice))
+				print('')
+				inp=input(play)
+				if inp in inp2:
+					quit()
+				if inp in inp1:
+					rps()
+			elif userchoice in r and rc in s or userchoice in p and rc in r or userchoice in s and rc in p:
+				print(rc)
+				print(win.format(userchoice,rc))
+				print('')
+				inp=input(play)
+				if inp in inp2:
+					quit()
+				if inp in inp1:
+					rps()
+			elif userchoice in r and rc in r or userchoice in p and rc in p or userchoice in s and rc in s:
+				print(rc)
+				print(draw.format(userchoice,rc))
+				print('')
+				inp=input(play)
+				if inp in inp2:
+					quit()
+				if inp in inp1:
+					rps()
+rps()
