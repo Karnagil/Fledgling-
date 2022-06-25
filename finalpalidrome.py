@@ -35,15 +35,15 @@ def prove_palindrome():
                     pal=''.join(ex for ex in inp if ex in alphabet)
        		for sub in inp:
        	            if sub in null:
-       		       sub=space
-       		    if inp!='##' and sub not in pal and sub not in lex:
-       		       lex[sub]=1
-       		    else:
-       		       if inp!='##' and sub in lex and sub not in pal:
-       			  lex[sub]+=1
+       	            	sub=space
+       	            if inp!='##' and sub not in pal and sub not in lex:
+       	            	lex[sub]=1
+       	            else:
+       	            	if inp!='##' and sub in lex and sub not in pal:
+       	            		lex[sub]+=1
        		if inp not in ('##',pal):
        		   print(extracted,pal)
-       	           print(subtracted,lex)
+       		   print(subtracted,lex)
        		pal2=pal[::-1]
        		if inp!='##' and pal==pal2:
        	           print(pal,ispal)
