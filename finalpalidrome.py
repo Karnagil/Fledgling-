@@ -19,9 +19,9 @@ def prove_palindrome():
        while count<2000000:
        	count+=1
        	if count==600000:
-       		print(botintro)
+       	   print(botintro)
        	if count==1200000:
-       		print(help1)
+       	   print(help1)
        while True:
        	palindrome=input(palinput)
        	inp=palindrome
@@ -32,23 +32,23 @@ def prove_palindrome():
        		if palindrome=='##':
        			print(help2)
        		for ex in inp:
-       				pal=''.join(ex for ex in inp if ex in alphabet)
+                    pal=''.join(ex for ex in inp if ex in alphabet)
        		for sub in inp:
-       			     		if sub in null:
-       			     			sub=space
-       			     		if inp!='##' and sub not in pal and sub not in lex:
-       			     			lex[sub]=1
-       			     		else:
-       			     		 		if inp!='##' and sub in lex and sub not in pal:
-       			     		 			lex[sub]+=1
+       	            if sub in null:
+       		       sub=space
+       		    if inp!='##' and sub not in pal and sub not in lex:
+       		       lex[sub]=1
+       		    else:
+       		       if inp!='##' and sub in lex and sub not in pal:
+       			  lex[sub]+=1
        		if inp not in ('##',pal):
-       			     		 	print(extracted,pal)
-       			     		 	print(subtracted,lex)
+       		   print(extracted,pal)
+       	           print(subtracted,lex)
        		pal2=pal[::-1]
        		if inp!='##' and pal==pal2:
-       			     		 	print(pal,ispal)
-       			     		 	lex={}
+       	           print(pal,ispal)
+       	           lex={}
        		if inp!='##' and pal!=pal2:
-       		      		 		print(pal,notpal)
-       		      		 		lex={}
+       		   print(pal,notpal)
+       		   lex={}
 prove_palindrome()
