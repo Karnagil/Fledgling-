@@ -99,7 +99,6 @@ for Dreson in range(1,15):
     print("🕯️")
 D="Dreson999"
 print("\n",D.center(24,"🎁"))
-
 #Wealth
 print(" " *16, " ️ 💸")
 for Dreson in range(1,15):
@@ -120,7 +119,7 @@ for Dreson in range(1,15):
     print("")
 D="Dreson999"    
 print("\n",D.center(24,"🌠"))
-#DiamondRings
+#Diamond_Rings
 print(" " *16, "  💍")
 for Dreson in range(1,15):
     for Dre in range(19-Dreson):
